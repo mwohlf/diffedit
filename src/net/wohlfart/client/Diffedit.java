@@ -60,7 +60,7 @@ public class Diffedit implements EntryPoint {
 		final TextEditor editor = new TextEditor("diffeditor");
 		editor.setWidth("700px");
 		editor.setHeight("400px");
-		editor.addOptions(TextEditorPreset.PRESET_BASIC);
+		editor.addOptions(TextEditorPreset.PRESET_ADVANCED);
 		// editor.addPlugin("contextmenu");
 		editor.setText("Hello, <b>World</b>!");
 		RootPanel.get("editorContainer").add(editorContainer);

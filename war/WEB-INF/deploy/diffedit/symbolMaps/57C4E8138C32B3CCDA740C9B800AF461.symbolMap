@@ -1963,16 +1963,18 @@ NA,net.wohlfart.client.GreetingService_TypeSerializer::$clinit()V,net.wohlfart.c
 OA,net.wohlfart.client.GreetingService_TypeSerializer::GreetingService_TypeSerializer() <init>,net.wohlfart.client.GreetingService_TypeSerializer,GreetingService_TypeSerializer,gen/net/wohlfart/client/GreetingService_TypeSerializer.java,72,0
 MA,net.wohlfart.client.GreetingService_TypeSerializer::methodMapNative,net.wohlfart.client.GreetingService_TypeSerializer,methodMapNative,gen/net/wohlfart/client/GreetingService_TypeSerializer.java,11,-1
 TextEditor,,net.wohlfart.client.TextEditor,,net/wohlfart/client/TextEditor.java,13,-1
-PA,net.wohlfart.client.TextEditor::$addOption(Lnet/wohlfart/client/TextEditor;Ljava/lang/String;Ljava/lang/String;)V,net.wohlfart.client.TextEditor,$addOption,net/wohlfart/client/TextEditor.java,95,0
-QA,net.wohlfart.client.TextEditor::$initTinyMce(Lnet/wohlfart/client/TextEditor;Lcom/google/gwt/core/client/JavaScriptObject;)V,net.wohlfart.client.TextEditor,$initTinyMce,net/wohlfart/client/TextEditor.java,111,0
-RA,net.wohlfart.client.TextEditor::$setContent(Lnet/wohlfart/client/TextEditor;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;,net.wohlfart.client.TextEditor,$setContent,net/wohlfart/client/TextEditor.java,87,0
-SA,net.wohlfart.client.TextEditor::TextEditor(Ljava/lang/String;) <init>,net.wohlfart.client.TextEditor,TextEditor,net/wohlfart/client/TextEditor.java,27,0
-a,net.wohlfart.client.TextEditor::elementId,net.wohlfart.client.TextEditor,elementId,net/wohlfart/client/TextEditor.java,17,-1
-b,net.wohlfart.client.TextEditor::fixedOptions,net.wohlfart.client.TextEditor,fixedOptions,net/wohlfart/client/TextEditor.java,18,-1
-c,net.wohlfart.client.TextEditor::initialized,net.wohlfart.client.TextEditor,initialized,net/wohlfart/client/TextEditor.java,16,-1
-TA,net.wohlfart.client.TextEditor::onLoad()V,net.wohlfart.client.TextEditor,onLoad,net/wohlfart/client/TextEditor.java,48,0
-d,net.wohlfart.client.TextEditor::options,net.wohlfart.client.TextEditor,options,net/wohlfart/client/TextEditor.java,19,-1
-WA,net.wohlfart.client.TextEditorPreset::$clinit()V,net.wohlfart.client.TextEditorPreset,$clinit,net/wohlfart/client/TextEditorPreset.java,6,0
-UA,net.wohlfart.client.TextEditorPreset::PRESET_ADVANCED,net.wohlfart.client.TextEditorPreset,PRESET_ADVANCED,net/wohlfart/client/TextEditorPreset.java,8,-1
-VA,net.wohlfart.client.TextEditorPreset::PRESET_BASIC,net.wohlfart.client.TextEditorPreset,PRESET_BASIC,net/wohlfart/client/TextEditorPreset.java,9,-1
-XA,net.wohlfart.shared.FieldVerifier::isValidName(Ljava/lang/String;)Z,net.wohlfart.shared.FieldVerifier,isValidName,net/wohlfart/shared/FieldVerifier.java,36,0
+PA,net.wohlfart.client.TextEditor::$addOption(Lnet/wohlfart/client/TextEditor;Ljava/lang/String;Ljava/lang/String;)V,net.wohlfart.client.TextEditor,$addOption,net/wohlfart/client/TextEditor.java,83,0
+QA,net.wohlfart.client.TextEditor::$addOptions(Lnet/wohlfart/client/TextEditor;Ljava/util/Map;)V,net.wohlfart.client.TextEditor,$addOptions,net/wohlfart/client/TextEditor.java,33,0
+RA,net.wohlfart.client.TextEditor::$initTinyMce(Lnet/wohlfart/client/TextEditor;Lcom/google/gwt/core/client/JavaScriptObject;)V,net.wohlfart.client.TextEditor,$initTinyMce,net/wohlfart/client/TextEditor.java,96,0
+SA,net.wohlfart.client.TextEditor::$setContent(Lnet/wohlfart/client/TextEditor;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;,net.wohlfart.client.TextEditor,$setContent,net/wohlfart/client/TextEditor.java,79,0
+TA,net.wohlfart.client.TextEditor::TextEditor(Ljava/lang/String;) <init>,net.wohlfart.client.TextEditor,TextEditor,net/wohlfart/client/TextEditor.java,20,0
+a,net.wohlfart.client.TextEditor::elementId,net.wohlfart.client.TextEditor,elementId,net/wohlfart/client/TextEditor.java,16,-1
+b,net.wohlfart.client.TextEditor::fixedOptions,net.wohlfart.client.TextEditor,fixedOptions,net/wohlfart/client/TextEditor.java,17,-1
+c,net.wohlfart.client.TextEditor::initialized,net.wohlfart.client.TextEditor,initialized,net/wohlfart/client/TextEditor.java,15,-1
+UA,net.wohlfart.client.TextEditor::onLoad()V,net.wohlfart.client.TextEditor,onLoad,net/wohlfart/client/TextEditor.java,43,0
+d,net.wohlfart.client.TextEditor::options,net.wohlfart.client.TextEditor,options,net/wohlfart/client/TextEditor.java,18,-1
+YA,net.wohlfart.client.TextEditorPreset::$clinit()V,net.wohlfart.client.TextEditorPreset,$clinit,net/wohlfart/client/TextEditorPreset.java,6,0
+VA,net.wohlfart.client.TextEditorPreset::PRESET_ADVANCED,net.wohlfart.client.TextEditorPreset,PRESET_ADVANCED,net/wohlfart/client/TextEditorPreset.java,8,-1
+WA,net.wohlfart.client.TextEditorPreset::PRESET_BASIC,net.wohlfart.client.TextEditorPreset,PRESET_BASIC,net/wohlfart/client/TextEditorPreset.java,7,-1
+XA,net.wohlfart.client.TextEditorPreset::PRESET_ICE,net.wohlfart.client.TextEditorPreset,PRESET_ICE,net/wohlfart/client/TextEditorPreset.java,9,-1
+ZA,net.wohlfart.shared.FieldVerifier::isValidName(Ljava/lang/String;)Z,net.wohlfart.shared.FieldVerifier,isValidName,net/wohlfart/shared/FieldVerifier.java,36,0

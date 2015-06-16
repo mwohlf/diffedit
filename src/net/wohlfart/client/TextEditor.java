@@ -11,18 +11,11 @@ import com.google.gwt.json.client.JSONString;
 import com.google.gwt.user.client.ui.TextArea;
 
 public class TextEditor extends TextArea implements EntryPoint {
-	private static final String DEFAULT_ELEMENT_ID = "textEditor";
 
 	private boolean initialized = false;
-	private String elementId;
-	private Set fixedOptions = new HashSet(2); // options that can not be overwritten
+	private final String elementId;
+	private Set<String> fixedOptions = new HashSet<>(2); // options that can not be overwritten
 	private JSONObject options = new JSONObject(); // all other TinyMCE options
-
-	
-	public TextEditor() {
-		this(DEFAULT_ELEMENT_ID);
-	}
-
 
 	public TextEditor(String elementId)
 	{
@@ -34,15 +27,17 @@ public class TextEditor extends TextArea implements EntryPoint {
 		addOption("elements", elementId);
 		fixedOptions.addAll(options.keySet());
 		// load preset
-		addOptions(TextEditorPreset.PRESET_BASIC);
+		//addOptions(TextEditorPreset.PRESET_BASIC);
 	}
 
-	public void addOptions(Map pRESET_BASIC) {
-		// TODO Auto-generated method stub
-
+	public void addOptions(Map<String, String> options) {
+		for (Map.Entry<String, String> entry : options.entrySet()) {
+			addOption(entry.getKey(), entry.getValue());
+		}
 	}
 
 	public void onModuleLoad() {
+		
 	}
 
 	protected void onLoad() {
@@ -50,15 +45,14 @@ public class TextEditor extends TextArea implements EntryPoint {
 		initialize();
 	}
 
-	private native void initTinyMce()
-	/*-{
+	private native void initTinyMce() /*-{
 	    var options = {
 	      mode: "exact",
 	      elements: this.@net.wohlfart.client.TextEditor::elementId,
-	      theme: "simple"
+	      theme: "modern"
 	    }
 	    $wnd.tinyMCE.init(options);
-	  }-*/;
+	}-*/;
 
 	public String getText() {
 		String result;
@@ -69,11 +63,10 @@ public class TextEditor extends TextArea implements EntryPoint {
 		}
 		return result;
 	}
-	private native String getContent(String elementId)
-	/*-{
+	
+	private native String getContent(String elementId) /*-{
 	     return $wnd.tinyMCE.get(elementId).getContent();
-	  }-*/;
-
+	}-*/;
 
 	public void setText(String text) {
 		if (initialized) {
@@ -83,33 +76,24 @@ public class TextEditor extends TextArea implements EntryPoint {
 		}
 	}
 
-
-	private native String setContent(String elementId, String text)
-	/*-{
+	private native String setContent(String elementId, String text) /*-{
 	     $wnd.tinyMCE.get(elementId).setContent(text);
-	  }-*/;
+	}-*/;
 
-
-
-
-	public void addOption(String key, String value)
-	{
+	public void addOption(String key, String value) {
 		// do not allow overriding fixed options
 		if (fixedOptions.contains(key)) {
 			return;
 		}
-
 		options.put(key, new JSONString(value));
 	}
 
-	private void initialize()
-	{
+	private void initialize(){
 		initTinyMce(options.getJavaScriptObject());
 		initialized = true;
 	}
 
-	private native void initTinyMce(JavaScriptObject options)
-	/*-{
+	private native void initTinyMce(JavaScriptObject options) /*-{
 	    $wnd.tinyMCE.init(options);
-	  }-*/;
+	}-*/;
 }
