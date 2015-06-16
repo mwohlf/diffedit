@@ -1,0 +1,2 @@
+serviceClass: net.wohlfart.client.GreetingService
+path: A82A477141D75CFAE70EFE6577D4B616.gwt.rpc

@@ -1,0 +1,3 @@
+# Module diffedit
+# RPC service class, partial path of RPC policy file
+net.wohlfart.client.GreetingService, A82A477141D75CFAE70EFE6577D4B616.gwt.rpc
